@@ -82,6 +82,16 @@ Experimental setup:
 2. Multi-station batch run (3 to 5 stations) for comparative analysis.
 3. Evaluate both models with identical train/test partitions per station.
 
+Stations used in this report run:
+- Number of stations used: 5 (from a total of 51 available station CSV files).
+- Selected stations: AM-TIMAN, LAI, SAO-FELIPE, MANACAPURU, OBIDOS.
+- Selection method: deterministic script-based subset with `--max-stations 5` for reproducible course-scope comparison.
+
+Why 5 stations were used:
+- Meets the project requirement for multi-experiment comparison while keeping runtime practical for iterative notebook and report updates.
+- Provides geographic and hydrological diversity (Chad and Amazon basins) without over-expanding the report scope.
+- Supports clear station-level analysis tables and figures suitable for a 12-page report and 10-15 slide presentation.
+
 Reproducible commands:
 1. `pip install -r requirements.txt`
 2. `python -m scripts.run_pipeline --station-file neodc/esacci/river_discharge/data/RD/RD-multi/v1.2/CSV/PO_BORGOFORTE_Q_Day.Cmd.csv`
@@ -109,6 +119,7 @@ Observed outcome summary:
 - The generated outputs indicate strong predictive performance on tested stations.
 - Example single-station run produced high R2 and low error relative to flow scale.
 - Multi-station results are consolidated in `results/station_comparison.csv`.
+- Station comparison table contains 5 successful stations and 0 failures for this run.
 
 [Image Placeholder: Actual vs predicted plot]
 [Image Placeholder: Residual plot]
