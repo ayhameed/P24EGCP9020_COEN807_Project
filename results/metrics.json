@@ -1,0 +1,19 @@
+{
+  "station": "BORGOFORTE",
+  "country": "ITALY",
+  "record_count": 4101.0,
+  "linear_regression": {
+    "rmse": 86.53788794578442,
+    "mae": 55.22788821898361,
+    "r2": 0.9563935410174643
+  },
+  "ridge_regression": {
+    "rmse": 86.67377280781604,
+    "mae": 55.34699190256066,
+    "r2": 0.9562564886815401
+  },
+  "ridge_tuning": {
+    "best_alpha": 1.0,
+    "cv_rmse": 138.34038379848846
+  }
+}
